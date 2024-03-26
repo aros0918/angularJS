@@ -1,0 +1,45 @@
+<div layout="column" layout-align="center center">
+	<md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>AngularJS</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-href="/login">
+        <!-- <md-icon>account_circle</md-icon> -->
+      </md-button>
+      <md-button class="md-icon-button" ng-href="/logout">
+				<md-icon>logout</md-icon>
+
+      </md-button>
+    </div>
+  </md-toolbar>
+	<md-content layout-padding>
+		<h2>Sign Up</h2>
+		<form name="signup_form" role="form" ng-submit="signup()">
+			<div>
+				<md-input-container>
+					<label>Username</label>
+					<input type="text" placeholder="Jonedoe" name="signup.username" ng-model="signup.username" required>
+				</md-input-container>
+			</div>
+			<div>
+				<md-input-container>
+					<label>Email address</label>
+					<input type="email" placeholder="johndoe@example.com" name="signup.email" ng-model="signup.email" required>
+				</md-input-container>
+			</div>
+			<div>
+				<md-input-container>
+					<label>Password</label>
+					<input type="password" placeholder="Password" name="signup.password" ng-model="signup.password" required>
+				</md-input-container>
+			</div>
+			<div>
+				<md-button class="md-raised" type="submit">Sign Up</md-button>
+			</div>
+		</form>
+		<div ng-if="signup.errors">
+			<h2>{{signup.errors}}</h2>
+		</div>
+		<p>Existing Customer? <a href="/login">Login Here</a></p>
+	</md-content>
+</div>

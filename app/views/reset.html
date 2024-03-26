@@ -1,0 +1,39 @@
+<div layout="column" layout-align="center center">
+	<md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>AngularJS</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-href="/login">
+        <!-- <md-icon>account_circle</md-icon> -->
+      </md-button>
+      <md-button class="md-icon-button" ng-href="/logout">
+        <md-icon>logout</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+	<md-content layout-padding>
+		<h2>Reset</h2>
+		<form name="reset_form" role="form" ng-submit="reset()">
+			
+			<div>
+				<md-input-container>
+					<label>Email address</label>
+					<input type="email" placeholder="johndoe@example.com" name="reset.email" ng-model="reset.email" required>
+				</md-input-container>
+			</div>
+			<div>
+				<md-input-container>
+					<label>Password</label>
+					<input type="password" placeholder="Password" name="reset.password" ng-model="reset.password" required>
+				</md-input-container>
+			</div>
+			<div>
+				<md-button class="md-raised" type="submit">Reset</md-button>
+			</div>
+		</form>
+		<div ng-if="reset.errors">
+			<h2>{{reset.errors}}</h2>
+		</div>
+
+	</md-content>
+</div>

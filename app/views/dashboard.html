@@ -1,0 +1,19 @@
+<div layout="column" layout-align="center center">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>AngularJS</span>
+      <span flex></span>
+      <md-button style="width: 100px;" class="md-icon-button">
+        {{ dashboard }}
+      </md-button>
+      <md-button style="width: 100px;" class="md-icon-button" ng-click="logout()">
+        Logout
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-content layout-padding>
+    <h2>Welcome {{ dashboard }} to AngularJS !!!</h2>
+    <md-button class="md-raised" ng-click="logout()">Log Out to leave</md-button>
+  </md-content>
+  <p>change your crediential <a href="/reset">Reset</a></p>
+</div>

@@ -1,0 +1,39 @@
+<div layout="column" layout-align="center center">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>AngularJS</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-href="/login">
+        <!-- <md-icon>account_circle</md-icon> -->
+      </md-button>
+      <md-button class="md-icon-button" ng-href="/logout">
+
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-content layout-padding>
+    <h2>Login</h2>
+    <form name="login_form" role="form" ng-submit="login()">
+      <div>
+        <md-input-container>
+          <label>Email address</label>
+          <input type="email" placeholder="johndoe@example.com" name="login.email" ng-model="login.email" required>
+        </md-input-container>
+      </div>
+      <div>
+        <md-input-container>
+          <label>Password</label>
+          <input type="password" placeholder="Password" name="login.password" ng-model="login.password" required>
+        </md-input-container>
+      </div>
+      <div>
+        <md-button class="md-raised" type="submit">Login</md-button>
+      </div>
+    </form>
+    <div ng-if="login.errors">
+      <h2>{{login.errors}}</h2>
+    </div>
+    <p>New Customer? <a href="/signup">Sign Up Today</a></p>
+  </md-content>
+  
+</div>
